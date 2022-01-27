@@ -1,0 +1,25 @@
+type Properties {
+  damage: String!
+  health: String!
+  weight: String!
+  value: String!
+}
+
+type Weapon {
+  name: String!
+  description: String!
+  position: String!
+  level: Int!
+  properties: Properties!
+}
+
+# Root
+type Query {
+  findAllWeapons: String!
+  countAll: Long!
+}
+
+# Root
+type Mutation {
+  createWeapon(name: String!, description: String!): String!
+}
